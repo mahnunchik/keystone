@@ -25,6 +25,7 @@ var moduleRoot = (function(_rootPath) {
  */
 var Keystone = function() {
 	grappling.mixin(this).allowHooks('pre:static', 'pre:bodyparser', 'pre:session', 'pre:routes', 'pre:render', 'updates', 'signout', 'signin');
+	this.stores = {};
 	this.lists = {};
 	this.paths = {};
 	this._options = {
@@ -140,6 +141,7 @@ keystone.Field = require('./fields/types/Type');
 keystone.Field.Types = require('./lib/fieldTypes');
 keystone.Keystone = Keystone;
 keystone.List = require('./lib/list');
+keystone.Store = require('./lib/store');
 keystone.View = require('./lib/view');
 
 keystone.content = require('./lib/content');
